@@ -10,6 +10,9 @@ readme = "README.md"
 keywords = ["boolector", "smt", "ffi", "bindings"]
 license = "MIT"
 
+[features]
+vendored = ['boolector-sys/vendored']
+
 [dependencies]
-boolector-sys = "0.5.0"
+boolector-sys = { git = "https://github.com/finga/boolector-sys", branch = "boolector-src", features = ["vendored"] }
 libc = "0.2.73"
